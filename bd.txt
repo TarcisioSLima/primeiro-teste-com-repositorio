@@ -1,0 +1,57 @@
+-- Adminer 4.8.1 MySQL 5.5.5-10.5.20-MariaDB-1:10.5.20+maria~ubu2004 dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+SET NAMES utf8mb4;
+
+CREATE DATABASE `db_site` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `db_site`;
+
+DROP TABLE IF EXISTS `tb_autor`;
+CREATE TABLE `tb_autor` (
+  `id_autor` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_autor` varchar(200) NOT NULL,
+  PRIMARY KEY (`id_autor`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+DROP TABLE IF EXISTS `tb_editora`;
+CREATE TABLE `tb_editora` (
+  `id_editora` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_editora` varchar(200) NOT NULL,
+  PRIMARY KEY (`id_editora`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+DROP TABLE IF EXISTS `tb_genero`;
+CREATE TABLE `tb_genero` (
+  `id_genero` int(11) NOT NULL AUTO_INCREMENT,
+  `genero` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_genero`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+DROP TABLE IF EXISTS `tb_livro`;
+CREATE TABLE `tb_livro` (
+  `id_livro` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_livro` varchar(200) NOT NULL,
+  `data_publi` date NOT NULL,
+  `titulo_livro` varchar(200) NOT NULL,
+  PRIMARY KEY (`id_livro`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+DROP TABLE IF EXISTS `tb_usuario`;
+CREATE TABLE `tb_usuario` (
+  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_usuario` varchar(200) NOT NULL,
+  `email_usuario` varchar(200) NOT NULL,
+  `senha_usuario` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_usuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+-- 2023-06-12 19:11:07

@@ -1,0 +1,269 @@
+-- Adminer 4.8.1 MySQL 5.5.5-10.5.21-MariaDB-1:10.5.21+maria~ubu2004 dump
+
+SET NAMES utf8;
+SET time_zone = '+00:00';
+SET foreign_key_checks = 0;
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+SET NAMES utf8mb4;
+
+DROP TABLE IF EXISTS `tb_autor`;
+CREATE TABLE `tb_autor` (
+  `id_autor` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_autor` varchar(200) NOT NULL,
+  PRIMARY KEY (`id_autor`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `tb_autor` (`id_autor`, `nome_autor`) VALUES
+(1,	'Colleen Hoover'),
+(2,	'Dante Alighieri'),
+(3,	'Beth O’Leary'),
+(4,	'Stephen King'),
+(5,	'Peter Straub'),
+(6,	'Ira Levin'),
+(7,	'Neil Gaiman'),
+(8,	'William Peter Blatty'),
+(9,	'Edgar Allan Poe'),
+(10,	'Robert Louis Stevenson'),
+(11,	'Mary Shelley'),
+(13,	'John Green'),
+(14,	'David Levithan'),
+(15,	'Cecelia Ahern'),
+(16,	'Lucy Maud Montgomery'),
+(17,	'Casey McQuiston'),
+(18,	'Sara Gruen'),
+(19,	'Jenna Evans Welch'),
+(20,	'Paula Pimenta'),
+(21,	'Clara Alves'),
+(22,	'Jojo Moyes'),
+(23,	'Jane Austen'),
+(24,	'Emily Brontë'),
+(25,	'William Shakespeare'),
+(26,	' Ray Bradbury'),
+(27,	'George Orwell'),
+(28,	'Philip K. Dick'),
+(29,	'Kiera Cass'),
+(30,	'Suzanne Collins'),
+(31,	'Ariano Suassuna'),
+(32,	'Mark Twain'),
+(34,	'Isaac Asimov'),
+(35,	'André Aciman'),
+(36,	'Yevgeny Zamyatin'),
+(37,	'Scott Westerfeld'),
+(38,	'William Gibson'),
+(39,	'William Golding'),
+(40,	'Cormac McCarthy'),
+(41,	'Ursula K. Le Guin'),
+(42,	' Ariano Suassuna'),
+(44,	'Douglas Adams'),
+(45,	'Meghan Doherty'),
+(47,	'Carina Rissi'),
+(48,	'Juan Pablo Villalobos'),
+(49,	'Dan Brown'),
+(50,	'Michael Crichton');
+
+DROP TABLE IF EXISTS `tb_editora`;
+CREATE TABLE `tb_editora` (
+  `id_editora` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_editora` varchar(200) NOT NULL,
+  PRIMARY KEY (`id_editora`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `tb_editora` (`id_editora`, `nome_editora`) VALUES
+(1,	'Editora Galera'),
+(2,	'Não Possui Editora'),
+(3,	'‎Intrínseca'),
+(4,	'Farrar, Straus and Giroux'),
+(6,	' Galera Record'),
+(7,	'HarperCollins'),
+(8,	'L.C. Page & Co.'),
+(9,	'Seguinte'),
+(10,	'Algonquin Books'),
+(11,	'Dutton Juvenile'),
+(12,	'Gutenberg'),
+(13,	'Tri Caju'),
+(14,	'Relógio D\'Água'),
+(15,	'Doubleday'),
+(16,	'Coward, McCann & Geoghegan'),
+(17,	'Viking Press'),
+(18,	'Random House'),
+(19,	'HarperCollins'),
+(20,	'Harper & Row'),
+(21,	'Companhia Das Letras  '),
+(22,	'Penguin Classics'),
+(23,	' Mavor & Jones'),
+(24,	'Faro Clássicos'),
+(25,	'Ballantine Books'),
+(26,	'Simon Pulse'),
+(27,	'Faber and Faber'),
+(28,	'Ace Books'),
+(29,	' Ballantine Books'),
+(30,	'Penguin Books'),
+(32,	' Scholastic Press'),
+(33,	' Alfred A. Knopf'),
+(34,	'Nova Frontreira '),
+(35,	'Pan Books'),
+(37,	'Sextante'),
+(38,	'L&PM POCKET'),
+(39,	' D. Appleton & Company'),
+(40,	'Quercus'),
+(42,	'Verus'),
+(43,	' Anagrama'),
+(44,	'Arqueiro'),
+(46,	'Aleph');
+
+DROP TABLE IF EXISTS `tb_genero`;
+CREATE TABLE `tb_genero` (
+  `id_genero` int(11) NOT NULL AUTO_INCREMENT,
+  `genero` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_genero`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `tb_genero` (`id_genero`, `genero`) VALUES
+(1,	'Romance'),
+(2,	'Ficção'),
+(3,	'Terror'),
+(4,	'Ação'),
+(5,	'Comédia'),
+(7,	'Comédia Romance');
+
+DROP TABLE IF EXISTS `tb_link_imagens`;
+CREATE TABLE `tb_link_imagens` (
+  `id_imagem` int(11) NOT NULL AUTO_INCREMENT,
+  `link_imagem` varchar(300) NOT NULL,
+  PRIMARY KEY (`id_imagem`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `tb_link_imagens` (`id_imagem`, `link_imagem`) VALUES
+(1,	'imagens/e_assim_que_acaba.jpg'),
+(2,	'imagens/a_divina_comedia.jpg'),
+(3,	'imagens/teto_para_dois.jpg'),
+(4,	'imagens/o_cemiterio.png'),
+(6,	'imagens/romeuejulieta.jfif'),
+(7,	'imagens/me_chame_pelo_seu_nome.png'),
+(8,	'imagens/como_eu_era_antes_de_voce.png'),
+(9,	'imagens/a_culpa_e_das_estrelas.jfif'),
+(10,	'imagens/agua_para_elefantes.jfif'),
+(11,	'imagens/amor_e_gelato.jfif'),
+(12,	'imagens/anne_de_green_ gables.jfif'),
+(13,	'imagens/conectadas.jfif'),
+(14,	'imagens/garoto_encontra_garoto.jfif'),
+(15,	'imagens/ghost_story.jfif'),
+(16,	'imagens/it_a_coisa.jfif'),
+(17,	'imagens/fazendo_meu_filme.jfif'),
+(18,	'imagens/o_bebe_de_rosemary.jfif'),
+(19,	'imagens/1984.jpg'),
+(20,	'imagens/fahrenheit_451.jpg'),
+(21,	'imagens/nos.jpg'),
+(22,	'imagens/uglies.jpg'),
+(23,	'imagens/neuromancer.jpg'),
+(24,	'imagens/eu_robo.jpg'),
+(25,	'imagens/jogos_vorazez.jpg'),
+(26,	'imagens/seraque_os_androides_sonham_com_ovelhas_eletricas.jpg'),
+(27,	'imagens/a_selecao_kiera_Cass.png'),
+(28,	'imagens/Senhor_das_Moscas.jpg'),
+(29,	'imagens/A_Estrada_de_Cormac.jpg'),
+(30,	'imagens/a_mao_esquerda_da_escuridao.jpg'),
+(31,	'imagens/O_Auto-da_Compadecida_Movie_Poster.jpg'),
+(32,	'imagens/O_guia_definitivo_do_mochileiro_das_galaxias.jpg'),
+(33,	'imagens/Como_nao_ser_um_babaca.jfif'),
+(34,	'imagens/Muito_barulho_por_nada.jfif'),
+(35,	'imagens/As_Aventuras_de_Tom_Sawyer.jpg'),
+(36,	' imagens/Clube_do_Livro_dos_Homens.jfif'),
+(37,	'imagens/A_Troca.png'),
+(38,	'imagens/No_Mundo_da_Luna.jfif'),
+(39,	'imagens/Te_vendo_um_cachorro.jfif'),
+(40,	'imagens/o_medico_e_o_monstro.jpg'),
+(41,	'imagens/Frankenstein.jpg'),
+(42,	'imagens/O_Corvo.jpg'),
+(43,	'imagens/The_Da_Vinci_Code.png'),
+(44,	'imagens/Inferno.jpg'),
+(45,	'imagens/Jurassic_Park.jpg');
+
+DROP TABLE IF EXISTS `tb_livro`;
+CREATE TABLE `tb_livro` (
+  `id_livro` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_livro` varchar(200) NOT NULL,
+  `data_publi` date NOT NULL,
+  `titulo_livro` varchar(200) NOT NULL,
+  `id_genero` int(11) NOT NULL,
+  `id_autor` int(11) NOT NULL,
+  `id_editora` int(11) NOT NULL,
+  `id_imagem` int(11) NOT NULL,
+  PRIMARY KEY (`id_livro`),
+  KEY `id_genero` (`id_genero`),
+  KEY `id_autor` (`id_autor`),
+  KEY `id_editora` (`id_editora`),
+  KEY `id_imagem` (`id_imagem`),
+  CONSTRAINT `tb_livro_ibfk_1` FOREIGN KEY (`id_genero`) REFERENCES `tb_genero` (`id_genero`),
+  CONSTRAINT `tb_livro_ibfk_2` FOREIGN KEY (`id_autor`) REFERENCES `tb_autor` (`id_autor`),
+  CONSTRAINT `tb_livro_ibfk_3` FOREIGN KEY (`id_editora`) REFERENCES `tb_editora` (`id_editora`),
+  CONSTRAINT `tb_livro_ibfk_4` FOREIGN KEY (`id_imagem`) REFERENCES `tb_link_imagens` (`id_imagem`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `tb_livro` (`id_livro`, `nome_livro`, `data_publi`, `titulo_livro`, `id_genero`, `id_autor`, `id_editora`, `id_imagem`) VALUES
+(1,	'É assim que acaba',	'2016-02-29',	'It ends with us',	1,	1,	1,	1),
+(3,	'A Divina Comédia',	'1472-01-01',	'The Divine Comedy',	5,	2,	2,	2),
+(5,	'Teto Para Dois',	'2019-09-09',	'The Flatshare',	7,	3,	3,	3),
+(6,	'O Bebê de Rosemary',	'1967-04-09',	'Rosemary\'s Baby',	3,	6,	18,	18),
+(7,	'Ghost Story',	'1979-01-01',	'História de fantasma',	3,	5,	16,	15),
+(8,	'Pet Sematary',	'1983-01-01',	' O Cemitério',	3,	4,	15,	4),
+(9,	'Romeu And Juliet',	'1847-01-01',	'Romeu E Julieta',	1,	25,	14,	6),
+(10,	'IT',	'1986-01-01',	'It: A Coisa',	3,	4,	17,	16),
+(11,	'Call Me By Your Name',	'2007-01-01',	'Me Chame Pelo Seu Nome',	1,	35,	4,	7),
+(12,	'Me Before You',	'2012-01-10',	'Eu Antes de Você',	1,	22,	3,	8),
+(13,	'Blame it on the stars',	'2012-01-01',	' A Culpa é das Estrelas',	1,	13,	3,	9),
+(14,	'Water for Elephants',	'2006-01-01',	' Água para Elefantes',	1,	18,	10,	10),
+(15,	'Love and Gelato',	'2016-01-01',	'Amor e Gelato',	1,	19,	3,	11),
+(16,	'Anne of Green Gables',	'1908-01-01',	'Anne de Green Gables',	1,	16,	8,	12),
+(17,	'Conectadas ',	'2019-01-01',	'Connected',	1,	21,	9,	13),
+(18,	'boy meets boy',	'2003-01-01',	'Garoto Encontra Garoto',	1,	14,	1,	14),
+(19,	' Fazendo Meu Filme',	'2008-01-01',	'Making my movie',	1,	20,	12,	17),
+(20,	'1984',	'1949-01-01',	'1984',	2,	27,	21,	19),
+(21,	'Fahrenheit 451',	'1953-01-01',	'Fahrenheit 451',	2,	26,	29,	20),
+(22,	'We',	'1921-01-01',	'Nós',	2,	36,	30,	21),
+(23,	'Uglies',	'2005-01-01',	'Feios',	2,	37,	26,	22),
+(24,	' Neuromancer',	'1984-01-01',	'neuromante',	2,	38,	30,	23),
+(25,	'I, Robot',	'1950-01-01',	'Eu, Robô',	2,	34,	15,	24),
+(26,	'The Hunger Games',	'2008-01-01',	'Jogos Vorazes',	2,	30,	32,	25),
+(27,	'Do Androids Dream of Electric Sheep?',	'1968-01-01',	'Androides Sonham com Ovelhas Elétricas?',	2,	28,	30,	26),
+(28,	'The selection',	'2012-01-10',	'A Seleção',	1,	29,	9,	27),
+(29,	'Lord of the Flies',	'1954-01-01',	'O Senhor das Moscas',	2,	39,	27,	28),
+(30,	'The Road',	'2006-01-01',	' A Estrada',	2,	40,	33,	29),
+(31,	'The Left Hand of Darkness',	'1969-01-10',	'A Mão Esquerda da Escuridão',	2,	41,	28,	30),
+(32,	'Auto da Compadecida',	'1955-01-01',	'Auto da Compadecida',	5,	42,	34,	31),
+(33,	'The Hitchhiker\'s Guide to the Galaxy',	'1979-01-01',	' O Guia do Mochileiro das Galáxias ',	5,	44,	35,	32),
+(34,	'Como não ser um babaca',	'2019-01-01',	'How not to be an asshole',	5,	45,	37,	33),
+(35,	'So much noise for nothing',	'1599-10-10',	'Muito Barulho Por Nada',	5,	25,	38,	34),
+(36,	'The Adventures of Tom Sawyer',	'1876-01-01',	'As Aventuras de Tom Sawyer ',	5,	32,	39,	35),
+(37,	'The Exchange',	'2020-10-01',	'A Troca',	7,	3,	40,	37),
+(39,	'No Mundo da Luna',	'2015-01-01',	'No Mundo da Luna',	7,	47,	42,	38),
+(40,	'te vendo un perro',	'2011-01-01',	'Te Vendo Um Cachorro',	7,	48,	43,	39),
+(41,	'The Doctor and the Monster',	'1886-01-10',	'O Médico e o Monstro',	3,	10,	30,	40),
+(42,	'Frankenstein',	'1818-01-01',	'Frankenstein',	3,	11,	23,	41),
+(43,	'The Raven',	'1845-01-10',	' O Corvo',	3,	9,	24,	42),
+(44,	'The Da Vinci Code',	'2003-01-01',	'O Código Da Vinci',	4,	49,	37,	43),
+(45,	'Inferno',	'2013-01-01',	'Inferno',	4,	49,	44,	44),
+(46,	'Jurassic Park',	'1990-01-10',	'Jurassic Park',	4,	50,	46,	45);
+
+DROP TABLE IF EXISTS `tb_usuario`;
+CREATE TABLE `tb_usuario` (
+  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_usuario` varchar(200) NOT NULL,
+  `email_usuario` varchar(200) NOT NULL,
+  `senha_usuario` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_usuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `tb_usuario` (`id_usuario`, `nome_usuario`, `email_usuario`, `senha_usuario`) VALUES
+(1,	'Rayssa',	'rayssamiranda@gmail.com',	'1234ray'),
+(2,	'Havila',	'havila@gmail.com',	'123456HAl'),
+(3,	'Samuel',	'osamuelbatista@gmail.com',	'DeusEBom2'),
+(4,	'Lucas',	'lucasfaria@gmail.com',	'famosaSenhaTeste'),
+(5,	'Ryan',	'ryancruz@gmail.com',	'punk123'),
+(6,	'Gusthavo',	'gusthavohenrrique@gmail.com',	'12345678'),
+(7,	'Fernadao',	'fernand@gmail.com',	'joranguinho'),
+(62,	'Janete',	'janetesila@gmail.com',	'8970'),
+(63,	'Luis',	'luiscleber@gmail.com',	'12345ty');
+
+-- 2023-06-29 02:11:35

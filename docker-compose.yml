@@ -1,0 +1,22 @@
+version: "3"
+services:
+  php:
+    container_name: "trabalho_DW_2A"
+    image: php:8.1.16-apache
+    volumes:
+     - ./codigos/html_php:/var/www/html/
+    ports:
+     - 8080:80      
+  db:
+    image: mariadb:10.5
+    container_name: "projeto"
+    restart: always
+    environment:
+    - MARIADB_USER=root
+    - MARIADB_ROOT_PASSWORD=54321
+  adminer:
+    image: adminer:4.8.1
+    container_name: "adminer_projeto"
+    restart: always
+    ports:
+      - 90:8080
