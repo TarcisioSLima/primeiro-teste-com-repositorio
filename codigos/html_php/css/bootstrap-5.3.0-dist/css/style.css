@@ -1,0 +1,77 @@
+body {
+    background-color: #F7EFFF;
+}
+
+.bx {
+    padding: 50px;
+    margin: 50px;
+}
+
+#ds {
+    text-align: center;
+}
+
+#tar {
+    text-align: justify;
+}
+
+#ray {
+    text-align: justify;
+}
+
+#ry {
+    text-align: justify;
+}
+
+#bvi {
+    text-align: center;
+}
+
+#if {
+    margin: 20px;
+}
+
+#ti {
+    text-align: center;
+}
+
+#in {
+    background-color: mediumpurple;
+}
+
+#in1 {
+    background-color: mediumpurple;
+}
+
+
+
+#cad {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    margin-top: 150px;
+}
+
+#cd {
+    text-align: center;
+}
+
+#log {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    margin-top: 150px;
+}
+
+#lg {
+    text-align: center;
+}
+
+#eq {
+    text-align: center;
+}
+
+#img1 {
+    width: 200px;
+    height: 200px;
+}
